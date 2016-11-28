@@ -1,0 +1,18 @@
+<div class="header">
+  <md-toolbar class="headerColor">
+    <span>{{title}}</span>
+    <span class="example-fill-remaining-space"></span>
+    <button class="buttonColorBlack" [disableRipple]="true" md-icon-button [md-menu-trigger-for]="menu">
+      <md-icon>more_vert</md-icon>
+    </button>
+  </md-toolbar>
+  <md-menu x-position="before" #menu="mdMenu">
+    <button class="buttonColorWhite" md-menu-item (click)="deleteAllRedisEntries()">Delete all!</button>
+  </md-menu>
+</div>
+<my-map></my-map>
+<div class="footer">
+  <md-toolbar class="headerColor">
+    <span>HSR / IFS</span>
+  </md-toolbar>
+</div>

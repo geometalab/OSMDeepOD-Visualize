@@ -1,0 +1,98 @@
+html,
+body {
+  height: 100%;
+  margin: 0
+}
+
+detection-app {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 100%;
+  width: 100%;
+}
+
+detection-app my-map {
+  flex: 1;
+  position: relative;
+}
+
+detection-app h1 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+}
+
+.flexbox-row {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 100%
+}
+
+.flexbox-row .column-left,
+.flexbox-row .column-right {
+  padding: 1em;
+}
+
+.flexbox-row .column-right {
+  flex: 1;
+  width: 200px;
+  overflow-y: scroll;
+}
+
+#map {
+  width: -moz-calc(100% - 200px);
+  width: -webkit-calc(100% - 200px);
+  width: calc(100% - 200px);
+}
+
+.buttonColor {
+  background-color: #237cc9;
+}
+
+.headerColor {
+  background-color: black;
+}
+
+.headerColor span {
+  color: white;
+
+}
+
+.buttonColorWhite {
+  background-color: white;
+}
+
+#input_webdis{
+  color: white;
+  background-color: black;
+  font-size: 15px;
+}
+.buttonColorBlack {
+  background-color: black;
+}
+
+.card {
+  margin-bottom: 10px;
+}
+
+.buttonColor .material-icons {
+  color: white;
+}
+
+#button_download {
+  width: 128px;
+  color: white;
+}
+
+#icon_download {
+  padding-top: 4px;
+}
+
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}

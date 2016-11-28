@@ -1,0 +1,8 @@
+{
+  "port":40003,
+  "redis": {
+    "server": "redis",
+    "port": 40001,
+    "password": "crosswalks"
+  }
+}

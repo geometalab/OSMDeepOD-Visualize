@@ -1,0 +1,34 @@
+version: '2'
+
+services:
+  visualize:
+    build: ./visualize/
+    links:
+       - "redis:redis"
+    expose:
+      - "40003"
+    ports:
+      - '40003:40003'
+
+
+  redis:
+    build: ./redis/
+    expose:
+      - "40001"
+      - "40002"
+    ports:
+       - "40001:40001"
+       - "40002:40002"
+    volumes:
+      - .:/crosswalks/
+
+  osmdeepod:
+    build: https://raw.githubusercontent.com/geometalab/OSMDeepOD/master/docker/Dockerfile
+    links:
+      - "redis:redis"
+    privileged: true
+    devices:
+      - "/dev/nvidia0:/dev/nvidia0"
+      - "/dev/nvidia1:/dev/nvidia1"
+      - "/dev/nvidiactl:/dev/nvidiactl"
+      - "/dev/nvidia-uvm:/dev/nvidia-uvm"

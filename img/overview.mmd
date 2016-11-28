@@ -1,0 +1,8 @@
+graph TB
+    subgraph docker-compose
+    OSMDeepOD["OSMDeepOD"] --> Redis["Redis"]
+    Visualize["Visualize"] --> Redis
+    end
+    classDef blue fill:#24b8eb,stroke:#394d54;
+    class Redis,OSMDeepOD,Visualize blue
+
