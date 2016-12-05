@@ -8,7 +8,7 @@ Thus the idea is to have some OSMDeepOD workers running, which are looking for o
 And they store their found points on the same redis instance. So the points could be visualized.
 
 This leads to an interaction between OSMDeepOD, redis and the visualization.
-Realised is this with different docker containers and docker-compose.
+This is realised with different docker containers and docker-compose.
 
 ![Visualize Interaction](img/overview.mmd.png)
 
@@ -16,7 +16,7 @@ Realised is this with different docker containers and docker-compose.
 ### Run
 
 ```
-git https://github.com/geometalab/OSMDeepOD-Visualize.git
+git clone https://github.com/geometalab/OSMDeepOD-Visualize.git
 cd OSMDeepOD-Visualize/docker/
 sudo docker-compose build
 sudo docker-compose up -d visualise
